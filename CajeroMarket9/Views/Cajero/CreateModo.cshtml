@@ -1,0 +1,123 @@
+﻿
+
+@model Application.ViewModels.CajeroListViewModels
+
+<h1> Modo de Dispensacion </h1>
+
+<div class="row">
+
+	<div class="col-md-4">
+		<div class="card">
+
+			<div class="card-header bg-black danger text-black- light"> <strong> Modo 1</strong></div>
+
+			<div class="card-body">
+				@if (Model.Modo1.Count == 0)
+				{
+					<h2> the are no date</h2>
+				}
+				else
+				{
+					<table class="table">
+
+						<thead>
+						<th>Monto</th>
+						</thead>
+
+						<tbody>
+
+							@foreach (var item in Model.Modo1)
+							{
+								<tr>
+									<td>@item.monto</td>
+								</tr>
+							}
+
+						</tbody>
+
+
+					</table>
+				}
+
+			</div>
+		</div>
+
+	</div>
+
+	<div class="col-md-4">
+		<div class="card">
+
+			<div class="card-header bg-success text-black- light"> <strong> Modo 2</strong></div>
+
+			<div class="card-body">
+				@if (Model.Modo2.Count == 0)
+				{
+					<h2> the are no date</h2>
+				}
+				else
+				{
+					<table class="table">
+
+						<thead>
+						<th>Monto</th>
+						</thead>
+
+						<tbody>
+
+							@foreach (var item in Model.Modo2)
+							{
+								<tr>
+									<td>@item.monto</td>
+								</tr>
+							}
+
+						</tbody>
+
+
+					</table>
+				}
+
+			</div>
+		</div>
+
+	</div>
+	<div class="col-md-4">
+		<div class="card">
+
+			<div class="card-header bg-warning text-black- light"> <strong>Modo Eficiente </strong></div>
+
+			<div class="card-body">
+				@if (Model.ModoEficiente.Count == 0)
+				{
+					<h2> the are no Date</h2>
+				}
+				else
+				{
+					<table class="table">
+
+						<thead>
+						<th>Monto</th>
+						</thead>
+
+						<tbody>
+
+							@foreach (var item in Model.ModoEficiente)
+							{
+								<tr>
+									<td>@item.monto</td>
+								</tr>
+							}
+
+						</tbody>
+
+
+					</table>
+				}
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
